@@ -1,0 +1,58 @@
+.header {
+	min-width: 100vw;
+	height: 7vh;
+	background-color: black;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.title {
+	font-family: Luminari, fantasy;
+	font-size: 5vh;
+	min-width: 60%;
+	text-align: center;
+	text-shadow: 0.02em 0.02em 0.5em goldenrod;
+}
+
+.buttons {
+	min-width: 20%;
+	margin-right: 1vw; 
+	display: flex;
+	justify-content: flex-end;
+}
+
+.freeSpace {
+	min-width: 20%;
+}
+
+button {
+	background-color: black;
+	border: 0.03em solid black;
+	border-radius: 20%;
+}
+
+
+@keyframes buttonHover{
+	0% {
+		color: white;
+		text-shadow: 0em 0em 0em black;
+	}
+	100% {
+		color: goldenrod;
+		text-shadow: 0.1em 0.1em 1em white;
+	}
+}
+
+#homeButton:hover {
+	color: goldenrod;
+	animation: buttonHover 1s;
+	text-shadow: 0.1em 0.1em 1em white;
+}
+
+#homeButton{
+	color: white;
+	font-size: 2vh;
+	font-weight: bold;
+}
