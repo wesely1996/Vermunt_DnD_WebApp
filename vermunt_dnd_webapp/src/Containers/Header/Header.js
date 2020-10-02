@@ -6,16 +6,18 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import "./Header.css";
 
-const CssTextField = withStyles({
+const SearchTextField = withStyles({
   root: {
   	'& label': {
   		color: 'white',
+      top: '-2vh',
   	},
   	'&:hover label': {
   		color: 'goldenrod',
   	},
     '& label.Mui-focused': {
       color: 'goldenrod',
+      top: '0vh',
     },
     '& .MuiInput-underline:after': {
       borderBottomColor: 'white',
@@ -32,10 +34,19 @@ const CssTextField = withStyles({
       },
       '& input': {
       	color: 'white',
+        padding: '0% 5%',
+        height: '6vh',
       },
     },
   },
 })(TextField);
+
+const HomeButton = withStyles({
+  root : {
+    '& button' : {
+    }
+  }
+})(Button);
 
 export default class Header extends React.Component {
 
@@ -45,7 +56,7 @@ export default class Header extends React.Component {
 				<div className="freeSpace"></div>
 				<div className="title">VERMUNT</div>
 				<form className="buttons" noValidate autoComplete="off">
-					<CssTextField
+					<SearchTextField
 		        	label="Search"
 		        	variant="outlined"
 		        	id="custom-css-outlined-input"
