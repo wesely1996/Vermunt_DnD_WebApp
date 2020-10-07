@@ -21,10 +21,60 @@
 .buttons {
 	min-width: 20%;
 	max-width: 20%;
+	height: 100%;
 	max-height: 8vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .freeSpace {
 	min-width: 20%;
 	max-width: 20%
+}
+
+.dropdown-menu{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: black;
+	min-height: 10vh;
+	min-width: 10vw;
+	box-shadow: 0em 0em 5em gray;
+	padding: 1vh 1vw;
+	border-radius: 5%;
+}
+
+#DropdownMenu {
+	font-size: 3vh;
+	font-weight: bold;
+}
+
+button {
+	background-color: transparent;
+	color: white;
+	border: 0em solid black;
+	font-size: 2vh;
+	margin: 1vh 1vw;
+}
+
+button:hover {
+	text-shadow: 0px 0px 1em goldenrod;
+}
+
+button:focus {
+	outline:none;
+	border: none;
+	text-shadow: 0px 0px 1em goldenrod;
+}
+
+input {
+	background-color: black;
+	color: white;
+	font-size: 2vh;
+	border: none;
+	box-shadow: 0px 0px 0.5em gray;
+	border-radius: 5%;
+	padding: 3%;
+	max-width: 70%;
 }

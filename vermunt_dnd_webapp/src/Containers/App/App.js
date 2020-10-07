@@ -9,7 +9,7 @@ class App extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = { 
-			alignment: "horizontal",
+			alignment: "vertical",
 			page:"home",
 		};
 		this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
@@ -25,7 +25,7 @@ class App extends React.Component {
 	}
 
 	updateWindowDimensions() {
-		this.setState({ state: window.innerWidth > window.innerHeight ? "horizontal" : "vertical" });
+		this.setState({ alignment: window.innerWidth > (1.3 * window.innerHeight) ? "horizontal" : "vertical" });
 	}
 
 	changePage(nextPage){

@@ -1,6 +1,7 @@
 import React from 'react';
-import "./Header.css";
+import {DropdownButton} from 'react-bootstrap';
 
+import "./Header.css";
 
 export default class Header extends React.Component {
 
@@ -14,9 +15,15 @@ export default class Header extends React.Component {
         {
           alignment==="horizontal" ?
             <div className="buttons">
+              <input type="text" name="Search" placeholder="Search"/>
+              <button>Home</button>
             </div>
           :
             <div className="buttons">
+              <DropdownButton id="DropdownMenu" title="MENU">
+                <button>Home</button>
+                <input type="text" name="Search" placeholder="Search"/>
+              </DropdownButton>
             </div>
         }
 			</div>
