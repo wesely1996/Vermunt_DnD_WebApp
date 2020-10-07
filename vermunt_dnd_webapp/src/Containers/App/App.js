@@ -9,8 +9,8 @@ class App extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = { 
-			window_width: 0, 
-			window_height: 0 
+			alignment: "horizontal",
+			page:"home",
 		};
 		this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
 	}
@@ -25,19 +25,38 @@ class App extends React.Component {
 	}
 
 	updateWindowDimensions() {
-		this.setState({ window_width: window.innerWidth, window_height: window.innerHeight });
+		this.setState({ state: window.innerWidth > window.innerHeight ? "horizontal" : "vertical" });
+	}
+
+	changePage(nextPage){
+		this.setState({page: nextPage});
 	}
 
 	render(){
-		const {window_height, window_width} = this.state;
+		const {alignment, page} = this.state;
+
 		return(
-				<div className={`App ${window_width < window_height ? "App-vertical" : "App-horisontal"}`}>
+				<div className="App">
 					<div id="paperbg"/>
-					<Header/>
-					<div className="navAndFeed">
-						<SideNav/>
-						<MainFeed/>
-					</div>
+					{
+						page==="home" ? 
+						<div>
+							<Header alignment={alignment}/>
+							<div className="navAndFeed">
+								<SideNav alignment={alignment}/>
+								<MainFeed alignment={alignment}/>
+							</div>
+						</div>
+						:
+						page==="login" ? 
+						<div>
+							LOGIN
+						</div>
+						:
+						<div>
+							ERROR
+						</div>
+					}
 				</div>
 		);
 	}
