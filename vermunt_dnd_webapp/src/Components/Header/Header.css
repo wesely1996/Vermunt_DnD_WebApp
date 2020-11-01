@@ -1,0 +1,36 @@
+.header{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.header_vertical{
+	height: 15vh;
+}
+
+.header_horizontal{
+	height: 10vh;
+}
+
+.header_container{
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.header_world_name{
+	font-weight: bold;
+	max-height: 75%;
+	font-size: 2.5em;
+	display: flex;
+	justify-content: center;
+}
+
+.header_world_date{
+	max-height: 25%;
+	font-size: 1.2em;
+	display: flex;
+	justify-content: center;
+}

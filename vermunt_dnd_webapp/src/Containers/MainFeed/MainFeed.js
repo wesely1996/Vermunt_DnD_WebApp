@@ -1,11 +1,17 @@
 import React from 'react';
-import "./MainFeed.css";
+import './MainFeed.css';
 
-export default class MainFeed extends React.Component {
+class MainFeed extends React.Component {
+
 	render(){
+		const {Alignment} = this.props;
+
 		return(
-			<div className="mainFeed">
+			<div className={`mf_container mf_${Alignment}`}>
+				Main Feed
 			</div>
 		);
 	}
 }
+
+export default MainFeed;

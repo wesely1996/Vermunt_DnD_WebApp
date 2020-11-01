@@ -1,8 +1,12 @@
-.mainFeed {
-	min-width: 85vw;
-	width: 85vw;
-	min-height: 92vh;
+.mf_container {
 	height: 100%;
-	max-height: 92vh;
-	color: black;
+	display: flex;
+}
+
+.mf_vertical{
+	width: 70%;
+}
+
+.mf_horizontal{
+	width: 85%;
 }

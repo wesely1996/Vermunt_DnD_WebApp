@@ -1,8 +1,9 @@
 import React from 'react';
 import './App.css';
-import Header from '../Header/Header';
-import SideNav from '../SideNav/SideNav';
-import MainFeed from '../MainFeed/MainFeed';
+import Header from './../../Components/Header/Header';
+import TimeLine from './../TimeLine/TimeLine';
+import MainFeed from './../MainFeed/MainFeed';
+import Codex from './../Codex/Codex';
 
 class App extends React.Component {
 
@@ -10,7 +11,7 @@ class App extends React.Component {
 		super(props);
 		this.state = { 
 			alignment: "vertical",
-			page:"home",
+			current_world_date: "1364",
 		};
 		this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
 	}
@@ -28,35 +29,20 @@ class App extends React.Component {
 		this.setState({ alignment: window.innerWidth > (1.3 * window.innerHeight) ? "horizontal" : "vertical" });
 	}
 
-	changePage(nextPage){
-		this.setState({page: nextPage});
-	}
-
 	render(){
-		const {alignment, page} = this.state;
+		const {alignment, current_world_date} = this.state;
 
 		return(
 				<div className="App">
 					<div id="paperbg"/>
-					{
-						page==="home" ? 
-						<div>
-							<Header alignment={alignment}/>
-							<div className="navAndFeed">
-								<SideNav alignment={alignment}/>
-								<MainFeed alignment={alignment}/>
-							</div>
+					<Header Alignment={alignment} CWD={current_world_date}/>
+					<div className={`fct_container fct_container_${alignment}`}>
+						<TimeLine Alignment={alignment} CWD={current_world_date}/>
+						<div className={`codex_feed cf_${alignment}`}>
+							<Codex Alignment={alignment}/>
+							<MainFeed Alignment={alignment}/>
 						</div>
-						:
-						page==="login" ? 
-						<div>
-							LOGIN
-						</div>
-						:
-						<div>
-							ERROR
-						</div>
-					}
+					</div>
 				</div>
 		);
 	}
