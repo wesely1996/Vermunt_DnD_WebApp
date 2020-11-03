@@ -1,5 +1,8 @@
 import React from 'react';
 import './MainFeed.css';
+import FeedCard from './../../Components/FeedCard/FeedCard';
+
+import {CardData} from './CardData';
 
 class MainFeed extends React.Component {
 
@@ -8,7 +11,9 @@ class MainFeed extends React.Component {
 
 		return(
 			<div className={`mf_container mf_${Alignment}`}>
-				Main Feed
+				{
+					CardData.map((card, key)=>(<FeedCard CardName={card.name} CardCont={card.cont}/>))
+				}
 			</div>
 		);
 	}

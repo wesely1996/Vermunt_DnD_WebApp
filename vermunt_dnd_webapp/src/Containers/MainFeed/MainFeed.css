@@ -1,6 +1,9 @@
 .mf_container {
 	height: 100%;
 	display: flex;
+	overflow-y: scroll;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
 .mf_vertical{
@@ -8,5 +11,5 @@
 }
 
 .mf_horizontal{
-	width: 85%;
+	width: 90%;
 }

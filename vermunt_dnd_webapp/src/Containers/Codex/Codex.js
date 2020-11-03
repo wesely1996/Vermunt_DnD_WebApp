@@ -15,6 +15,8 @@ class Codex extends React.Component {
 				<div>4. Events</div>
 				<div>5. Items</div>
 				<div>6. General Information</div>
+				<div>7. Generators</div>
+				<div>8. Homebrew Rules</div>
 				<div className={`pusher_${Alignment}`}></div>
 			</div>
 		);
