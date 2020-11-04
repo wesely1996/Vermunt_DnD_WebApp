@@ -1,8 +1,14 @@
+@font-face {
+  font-family: fantasyFontMid;
+  src: url("./../../Fonts/fantaisieartistique/FantaisieArtistique.ttf");
+}
+
 .App {
   min-width: 100vw;
   max-width: 100vw;
   min-height: 100vh;
   max-height: 100vh;
+  font-family: TimesNewRoman;
 }
 
 #paperbg {
@@ -26,11 +32,11 @@
 }
 
 .fct_container_horizontal{
-	height: 90vh;
+	height: 88vh;
 }
 
 .codex_feed{
-	margin: 1% 5% 1% 5%;
+	margin: 1em 2em 1em 2em;
 	display: flex;
 	justify-content: center;
 }

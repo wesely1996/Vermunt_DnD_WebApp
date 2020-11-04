@@ -12,7 +12,7 @@ class MainFeed extends React.Component {
 		return(
 			<div className={`mf_container mf_${Alignment}`}>
 				{
-					CardData.map((card, key)=>(<FeedCard CardName={card.name} CardCont={card.cont}/>))
+					CardData.map((card, key)=>(<FeedCard key={key} CardName={card.name} CardCont={card.cont}/>))
 				}
 			</div>
 		);
