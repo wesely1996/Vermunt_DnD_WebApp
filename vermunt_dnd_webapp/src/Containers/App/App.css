@@ -36,15 +36,8 @@
 }
 
 .codex_feed{
-	margin: 1em 2em 1em 2em;
+	margin: 1% 2% 1% 2%;
 	display: flex;
 	justify-content: center;
-}
-
-.cf_vertical{
-	height: 85%;
-}
-
-.cf_horizontal{
-	height: 90%;
+	height: 97%;
 }

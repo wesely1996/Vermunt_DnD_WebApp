@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
 import Header from './../../Components/Header/Header';
-//import TimeLine from './../TimeLine/TimeLine';
 import MainFeed from './../MainFeed/MainFeed';
 import Codex from './../Codex/Codex';
 
@@ -45,7 +44,7 @@ class App extends React.Component {
 					<div id="paperbg"/>
 					<Header Alignment={alignment} CWD={current_world_date}/>
 					<div className={`fct_container fct_container_${alignment}`}>
-						<div className={`codex_feed cf_${alignment}`}>
+						<div className={`codex_feed`}>
 							<Codex Alignment={alignment} changeContent={this.changeContent}/>
 							<MainFeed Alignment={alignment} FeedContent={feed_content}/>
 						</div>
